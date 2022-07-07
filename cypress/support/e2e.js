@@ -15,6 +15,15 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './login.actions'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+/* Ejecutara este comando para capturar algun error inesperado y visitara la pagina configurada en BaseUrl
+en cypress.config.js */
+beforeEach(()=>{
+    Cypress.on('uncaught:exeption', ()=>{
+        return false;
+    })
+    cy.visit('/')
+})
