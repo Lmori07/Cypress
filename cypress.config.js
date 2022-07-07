@@ -5,7 +5,7 @@ module.exports = defineConfig({
   projectId: 'i9nzb8',
   e2e: {
     /*URL base que se usara cada vez que el visit se encuentre con el simbolo de root '/' */
-    baseUrl: 'https://www.saucedemo.com',
+    //baseUrl: '',
     //Desabilitar alguans funciones que pueden bloquear el testing por seguridad de algunas funciones en Chrome
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {
