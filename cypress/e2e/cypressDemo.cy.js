@@ -11,11 +11,11 @@ describe('example to-do app', () => {
       //#id_contact select this
       cy.get('select').select('Customer service')
       //#email
-      cy.get('#email').type('111@11111.com')
+      cy.get('#email').type('test@test.com')
       //#id_order
       cy.get('#id_order').type('7656351500')
       //#message
-      cy.get('#message').type('This email is for testing automation with cypress')
+      cy.get('#message').type('Cypress Test Message.')
       //#submitMessage click on
       cy.get('#submitMessage').click()
     })
