@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest":"npm run test -- --headed",
+    "chromeTest":"npm run test -- --browser chrome",
+    "dashboardTrack":"npm run test -- --record --key daabfc27-a348-4793-92b8-d9eb3e0e2ce5"
   },
+  
   "author": "Jose Osv. Morillo Villar",
   "license": "ISC",
   "dependencies": {
