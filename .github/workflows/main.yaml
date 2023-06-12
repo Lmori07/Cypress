@@ -1,17 +1,19 @@
-name: Run Cypress Test
+name: Cypress Github
+
 on: [push]
+
 jobs:
   install:
-    runs-on: window-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install Modules
-        uses: npm ci
-      - name: Cypress
+
+      - name: Cypress run
         uses: cypress-io/github-action@v3
         with:
+          project: ./site
           browser: chrome
-          headless: true
-          start: npm run dev
-          wait-on: http://localhost:59420
+          build: yarn build
+          start: yarn start
+          wait-on: "http://localhost:59420"
